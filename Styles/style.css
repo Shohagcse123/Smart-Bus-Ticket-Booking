@@ -1,0 +1,10 @@
+/* Raleway Font */
+.borderDashed{
+    border-style: dashed;
+    border-left:none;
+    border-bottom:none;
+    border-right:none;
+}
+th{
+    font-size: medium;
+}

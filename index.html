@@ -1,62 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Bus Ticket Booking </title>
-    <!-- Font awesome icon link -->
-    <script src="https://kit.fontawesome.com/e1df079133.js" crossorigin="anonymous"></script>
-    <!-- custom css linkup -->
-    <link rel="stylesheet" href="Styles/style.css">
-    <!-- daisy Ui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Bus Ticket Booking </title>
+  <!-- Font awesome icon link -->
+  <script src="https://kit.fontawesome.com/e1df079133.js" crossorigin="anonymous"></script>
+  <!-- custom css linkup -->
+  <link rel="stylesheet" href="Styles/style.css">
+  <!-- daisy Ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <header></header>
-    <main>
-        <!-- Navbar -->
-      <section id="navBar" class="mx-28">
+  <header></header>
+  <main>
+    <!-- Navbar -->
+    <section id="navBar" class="mx-28">
       <div class="">
-       
+
         <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>
-                  <li>
-                    <a href="">About</a>
-                  </li>
-                  <li><a>Destination</a></li>
-                  <li><a>Search</a></li>
-                </ul>
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
               </div>
-              <a class="btn btn-ghost text-xl">SHOHAG ElITE</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
+              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 <li><a>Home</a></li>
                 <li>
-                    <a>About</a>
+                  <a href="">About</a>
                 </li>
                 <li><a>Destination</a></li>
-                <li><a >Search</a></li>
+                <li><a>Search</a></li>
               </ul>
             </div>
-            <div class="navbar-end">
-              <a class="btn w-28 h-14 text-green-500 border border-green-300 rounded-xl">Bus <i class="fa-solid fa-van-shuttle text-green-500 "></i></a>
-            </div>
+            <a class="btn btn-ghost text-xl">SHOHAG ElITE</a>
           </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li>
+                <a>About</a>
+              </li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn w-28 h-14 text-green-500 border border-green-300 rounded-xl">Bus <img
+                src="images/bus-icon.png" alt="" srcset=""> </a>
+          </div>
+        </div>
 
       </div>
 
-      </section>
+    </section>
+    <!-- banner part -->
+    <section id="Banner" class="mx-28 mt-12 ">
+      <div
+        class="flex flex-col items-center justify-center bg-[url('/images/banner.png')] bg-no-repeat bg-center min-h-screen -mt-16">
+        <h1 class="text-6xl font-extrabold   text-white">End-to-End Travel with</h1>
+        <h2 class="text-[#1DD100] text-6xl font-extrabold p-4"> Shohag Paribahan</h2>
+        <p class="text-center text-lg text-white font-normal p-4">Our buses are equipped with full HD Display and DVD
+          player to play drama <br>music and movies in order to make the journey more enjoyable.</p>
+        <button class="btn  text-center bg-[#1DD100] text-black outline-none border-none">Buy Tickets</button>
+      </div>
+    </section>
+    <!-- cupon code  -->
+    <section class="container mx-auto">
+      <h1 class="text-center text-3xl font-bold">Best offers for you</h1>
+     <div class="flex items-center justify-center py-6 gap-6">
+
+      <div class="flex items-center justify-center">
+
+        <div class="text-center p-10 rounded-tl-2xl rounded-bl-2xl border-2 bg-yellow-400 w-fit">
+          <h2 class="text-xl font-bold">15% OFF</h2>
+          <p class="text-xl text-black">on your next purchase </p>
+         
+          <p>use by January 2024</p>
+        </div>
+      
+          <img src="images/info-devider.png" class="h-44 text-8xl font-semibold" alt="" srcset="">
+        
+        <div class="text-center p-14 rounded-tr-2xl rounded-br-2xl border-2 bg-yellow-400 w-fit">
+
+        <h2>NEW<sub>15</sub></h2>
+        <p>Cupon Code</p>
+        </div>
 
 
-    </main>
-    <footer></footer>
+
+
+      </div>
+
+
+      <div class="flex items-center justify-center">
+
+        <div class="text-center p-10 rounded-tl-2xl rounded-bl-2xl border-2 bg-pink-400 w-fit">
+          <h2 class="text-xl font-bold">20% OFF</h2>
+          <p class="text-xl text-black">on your next purchase </p>
+         
+          <p>use by January 2024</p>
+        </div>
+      
+          <img src="images/info-devider.png" class="h-44 text-8xl font-semibold" alt="" srcset="">
+        
+        <div class="text-center p-14 rounded-tr-2xl rounded-br-2xl border-2 bg-pink-400 w-fit">
+
+        <h2>Couple 20</h2>
+        <p>Cupon Code</p>
+        </div>
+
+
+
+
+      </div>
+
+
+     </div>
+     
+     <div class="flex items-center justify-center">
+
+      <button class=" p-3 rounded-2xl text-center border border-green-400 text-green-600">See All Offers</button>
+     </div>
+
+
+    </section>
+    <!-- Shohag poribahan -->
+    <section class="mx-20 mt-12 ">
+      <h1 class="text-center text-3xl font-bold ">SHOHAG PARIBAHAN</h1>
+      <p class=" py-12 text-center">All of our buses are equipped with GPS and Camera <br> for safety of the valued
+        passenger.</p>
+
+      <div class="flex  justify-around relative ">
+
+        <div class="flex gap-3">
+
+          <img src="images/bus-logo.png" class="flex justify-center items-center" width="200px" height="200px" alt=""
+            srcset="">
+          <div>
+            <h2 class="text-3xl text-nowrap"> Shohag Paribahan</h2>
+            <p>Coach-009-WEB ! AC_Business</p>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn  w-44 border-none bg-slate-300 "><img src="images/seat-green.png" alt="" srcset=""> <span
+              class="text-green-600">40</span><span class="text-green-600">Seats Left </span></button>
+        </div>
+        <!-- dperature time part -->
+
+
+
+        <div class="flex flex-col text-center justify-center items-center relative top-16">
+
+          <img src="images/fare.png" alt="" srcset="">
+          <h3 class="text-2xl font-semibold">550 Taka</h3>
+          <p>per seat</p>
+        </div>
+
+      </div>
+
+
+
+      <div class="grid grid-cols-2 gap-12  grid-rows-3 text-center ">
+
+
+        <h4 class="relative ml-5">Route</h4>
+        <h4 class="text-black relative right-40">Dhaka-Sylhet</h4>
+
+
+
+        <h4 class=" relative  ml-20">Departure Time</h4>
+        <h4 class="relative right-40">9:00pm</h4>
+
+
+
+        <div class=" flex justify-between gap-6 relative left-72 text-left">
+
+          <button class="btn">Boarding Point-Laxmipur</button>
+          <button class="btn">Droping Point-Bogura</button>
+          <button class="btn">Est,Time - 11 hour</button>
+        </div>
+      </div>
+
+    </section>
+    <section class="border-2 rounded-2xl  mx-28 mt-12 p-6">
+      <h2>Select Your Seat</h2>
+
+  <!-- Seat parent div -->
+      <div class="flex gap-5 justify-between pt-6">
+
+
+
+        <div class="flex-1">
+
+
+          <div class="flex justify-end ">
+            <div class="flex flex-1">
+              <h4>Available seat</h4>
+              <img src="images/seat-gray.png" alt="" srcset="">
+            </div>
+            <div class="flex flex-1 justify-end">
+              <h4>Selected seat</h4>
+              <img src="images/seat-green-filled.png" alt="" srcset="">
+            </div>
+
+
+          </div>
+
+          <div class="pt-6 flex justify-end">
+            <button class="btn border-none bg-slate-200  w-28"><i class="fa-regular fa-life-ring"></i></button>
+          </div>
+
+          <!-- seat design -->
+          <div class="flex flex-col pt-6 gap-4">
+
+            <div class="grid grid-cols-5 grid-rows-1 flex items-center justify-center  ">
+              <p class="">A</p>
+              <kbd class="btn w-20">A1</kbd>
+              <kbd class="btn w-20">A2</kbd>
+              <kbd class="btn w-20">A3</kbd>
+              <kbd class="btn w-20">A4</kbd>
+
+
+            </div>
+            <div class="grid  grid-cols-5 grid-rows-1 flex items-center justify-center">
+              <p>B</p>
+              <kbd class="btn w-20">B1</kbd>
+              <kbd class="btn w-20">B2</kbd>
+              <kbd class="btn w-20">B3</kbd>
+              <kbd class="btn w-20">B4</kbd>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
+            <p>C</p>
+            <kbd class="btn w-20">C1</kbd>
+            <kbd class="btn w-20">C2</kbd>
+            <kbd class="btn w-20">C3</kbd>
+            <kbd class="btn w-20">C4</kbd>
+          </div>
+
+          <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
+            <p>D</p>
+            <kbd class="btn w-20">D1</kbd>
+            <kbd class="btn w-20">D2</kbd>
+            <kbd class="btn w-20">D3</kbd>
+            <kbd class="btn w-20">D4</kbd>
+          </div>
+          <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
+            <p>E</p>
+            <kbd class="btn w-20">E1</kbd>
+            <kbd class="btn w-20">E2</kbd>
+            <kbd class="btn w-20">E3</kbd>
+            <kbd class="btn w-20">E4</kbd>
+          </div>
+
+        </div>
+
+           <img src="images/info-devider.png" class="min-h-screen" alt="" srcset="">
+
+           
+        <div class="flex-1">
+
+          <h2>Select Your Seat</h2>
+          <div class="border-2 bg-gray-200 rounded-xl">
+            <div class="overflow-x-auto">
+              <table class="table table-zebra">
+                <!-- head -->
+                <thead>
+                  <tr>
+                    
+                    <th>Seat <span id="selectedSeat" class="text-green-500">2</span></th>
+                    <th>Class</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody id="rowAdd" >
+                  <!-- row 1 -->
+                 
+                    
+
+
+                </tbody>
+              </table>
+              
+
+              
+            </div>
+            <hr>
+            <div class="flex justify-around">
+              <h3 class="relative right-20">Total price</h3>
+              <h3>BDT <span>550</span></h3>
+            </div>
+            <label class="input  input-bordered my-6 mx-8 w-96 flex items-center gap-2">
+              <input type="text" class="grow" placeholder="have any cupon ?" />
+              <!-- <span class="badge badge-info  w-11 ">Apply</span> -->
+              <button class="rounded-2xl w-14 p-2 text-center bg-green-600 text-white">Apply</button>
+            </label>
+            <div class="flex justify-around">
+              <h3 class="relative right-14">Grand Total</h3>
+              <h3><span>BDT price 1100</span></h3>
+            </div>
+           <div class="mx-8 py-6">
+            <p class="text-xl"> Passenger Name:</p>
+            <input type="text" placeholder="enter your name" class="input input-bordered w-96 " /> 
+            <p class="text-xl"> Phone Number:</p>
+            <input type="text" placeholder="enter you phn number" class="input input-bordered w-96 " />
+            <p class="text-xl">Email Id:</p>
+            <input type="email" placeholder="enter email id" class="input input-bordered w-96 " />
+             <button class="w-96 mt-6 bg-green-500 text-white text-center p-2 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl">Next</button>
+           </div> 
+
+           <div class="flex justify-around relative right-10">
+               <p><u>Terms and condition</u></p>
+               <p><u>cancellation policy</u></p>
+           </div>
+           
+          </div>
+          <hr>
+        </div>
+
+
+
+
+      </div>
+
+      
+
+
+
+
+
+      
+
+    </section>
+
+  </main>
+  <footer></footer>
 </body>
+
 </html>
