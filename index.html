@@ -68,7 +68,7 @@
         <h2 class="text-[#1DD100] text-6xl font-extrabold p-4"> Shohag Paribahan</h2>
         <p class="text-center text-lg text-white font-normal p-4">Our buses are equipped with full HD Display and DVD
           player to play drama <br>music and movies in order to make the journey more enjoyable.</p>
-        <button class="btn  text-center bg-[#1DD100] text-black outline-none border-none">Buy Tickets</button>
+        <button id="buyTicket" onclick="scrollToSection('ticketBooking')" class="btn  text-center bg-[#1DD100] text-black outline-none border-none"> Buy Tickets </button>
       </div>
     </section>
     <!-- cupon code  -->
@@ -132,7 +132,7 @@
 
     </section>
     <!-- Shohag poribahan -->
-    <section class="mx-20 mt-12 ">
+    <section id="ticketBooking" class="mx-20 mt-12  ">
       <h1 class="text-center text-3xl font-bold ">SHOHAG PARIBAHAN</h1>
       <p class=" py-12 text-center">All of our buses are equipped with GPS and Camera <br> for safety of the valued
         passenger.</p>
@@ -151,7 +151,7 @@
 
         <div>
           <button class="btn  w-44 border-none bg-slate-300 "><img src="images/seat-green.png" alt="" srcset=""> <span
-              class="text-green-600">40</span><span class="text-green-600">Seats Left </span></button>
+             id="seatDecrease" class="text-green-600 ">40</span><span class="text-green-600">Seats Left </span></button>
         </div>
         <!-- dperature time part -->
 
@@ -190,7 +190,7 @@
       </div>
 
     </section>
-    <section class="border-2 rounded-2xl  mx-28 mt-12 p-6">
+    <section class="border-2 rounded-2xl   mx-28 mt-12 p-6">
       <h2>Select Your Seat</h2>
 
   <!-- Seat parent div -->
@@ -198,7 +198,7 @@
 
 
 
-        <div class="flex-1">
+        <div  class="flex-1">
 
 
           <div class="flex justify-end ">
@@ -219,48 +219,50 @@
           </div>
 
           <!-- seat design -->
-          <div class="flex flex-col pt-6 gap-4">
+          <div id="seatParent" class="flex flex-col pt-6 gap-4">
 
             <div class="grid grid-cols-5 grid-rows-1 flex items-center justify-center  ">
               <p class="">A</p>
-              <kbd class="btn w-20">A1</kbd>
-              <kbd class="btn w-20">A2</kbd>
-              <kbd class="btn w-20">A3</kbd>
-              <kbd class="btn w-20">A4</kbd>
+              <Button id="A1" class="seatButon">A1</Button>
+              <Button id="A2" class="seatButon">A2</Button>
+              <Button id="A3" class="seatButon">A3</Button>
+              <Button id="A4" class="seatButon">A4</Button>
 
 
             </div>
             <div class="grid  grid-cols-5 grid-rows-1 flex items-center justify-center">
-              <p>B</p>
-              <kbd class="btn w-20">B1</kbd>
-              <kbd class="btn w-20">B2</kbd>
-              <kbd class="btn w-20">B3</kbd>
-              <kbd class="btn w-20">B4</kbd>
+            <p>B</p>
+              <Button id="B1" class="seatButon">B1</Button>
+              <Button id="B2" class="seatButon">B2</Button>
+              <Button id="B3" class="seatButon">B3</Button>
+              <Button id="B4" class="seatButon">B4</Button>
             </div>
+            <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
+              <p>C</p>
+              <Button id="C1" class="seatButon">C1</Button>
+              <Button id="C2" class="seatButon">C2</Button>
+              <Button id="C3" class="seatButon">C3</Button>
+              <Button id="C4" class="seatButon">C4</Button>
+            </div>
+  
+            <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
+              <p>D</p>
+              <Button id="D1" class="seatButon">D1</Button>
+              <Button id="D2" class="seatButon">D2</Button>
+              <Button id="D3" class="seatButon">D3</Button>
+              <Button id="D4" class="seatButon">D4</Button>
+            </div>
+            <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
+              <p>E</p>
+                <Button id="E1" class="seatButon">E1</Button>
+                <Button id="E2" class="seatButon">E2</Button>
+                <Button id="E3" class="seatButon">E3</Button>
+                <Button id="E4" class="seatButon">E4</Button>
+            </div>
+
           </div>
 
-          <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
-            <p>C</p>
-            <kbd class="btn w-20">C1</kbd>
-            <kbd class="btn w-20">C2</kbd>
-            <kbd class="btn w-20">C3</kbd>
-            <kbd class="btn w-20">C4</kbd>
-          </div>
-
-          <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
-            <p>D</p>
-            <kbd class="btn w-20">D1</kbd>
-            <kbd class="btn w-20">D2</kbd>
-            <kbd class="btn w-20">D3</kbd>
-            <kbd class="btn w-20">D4</kbd>
-          </div>
-          <div class="grid grid-cols-5 pt-6 grid-rows-1 flex items-center justify-center">
-            <p>E</p>
-            <kbd class="btn w-20">E1</kbd>
-            <kbd class="btn w-20">E2</kbd>
-            <kbd class="btn w-20">E3</kbd>
-            <kbd class="btn w-20">E4</kbd>
-          </div>
+          
 
         </div>
 
@@ -274,12 +276,12 @@
             <div class="overflow-x-auto">
               <table class="table table-zebra">
                 <!-- head -->
-                <thead>
+                <thead class="">
                   <tr>
                     
-                    <th>Seat <span id="selectedSeat" class="text-green-500">2</span></th>
-                    <th>Class</th>
-                    <th>Price</th>
+                    <th class="">Seat <span id="selectedSeat" class="text-white w-2 p-1 rounded-2xl bg-green-500">0</span></th>
+                    <th class="">Class</th>
+                    <th class="">Price</th>
                   </tr>
                 </thead>
                 <tbody id="rowAdd" >
@@ -297,16 +299,16 @@
             <hr>
             <div class="flex justify-around">
               <h3 class="relative right-20">Total price</h3>
-              <h3>BDT <span>550</span></h3>
+              <h3>BDT <span id="totalPrice">550</span></h3>
             </div>
-            <label class="input  input-bordered my-6 mx-8 w-96 flex items-center gap-2">
-              <input type="text" class="grow" placeholder="have any cupon ?" />
-              <!-- <span class="badge badge-info  w-11 ">Apply</span> -->
-              <button class="rounded-2xl w-14 p-2 text-center bg-green-600 text-white">Apply</button>
+            <label id="cuponLevel" class="input  input-bordered my-6 mx-8 w-96 flex items-center gap-2">
+              <input id="cuponField" type="text" class="grow" placeholder="have any cupon ?" />
+              
+              <button id="cuponButon" class="rounded-2xl w-14 p-2 text-center bg-green-600 text-white">Apply</button>
             </label>
             <div class="flex justify-around">
               <h3 class="relative right-14">Grand Total</h3>
-              <h3><span>BDT price 1100</span></h3>
+              <h3>BDT <span id="grandTotal">550</span></h3>
             </div>
            <div class="mx-8 py-6">
             <p class="text-xl"> Passenger Name:</p>
@@ -331,19 +333,12 @@
 
 
       </div>
-
-      
-
-
-
-
-
-      
-
     </section>
 
   </main>
   <footer></footer>
+  <script src="Scripts/Ticketbuy.js"></script>
+  
 </body>
 
 </html>

@@ -8,3 +8,13 @@
 th{
     font-size: medium;
 }
+.seatButon{
+   text-align: center;
+    width:90px;
+   
+    border: 1px solid gray;
+    border: none;
+    padding: 10px;
+    background-color:gainsboro;
+    border-radius: 12px;
+}
