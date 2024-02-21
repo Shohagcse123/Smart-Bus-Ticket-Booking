@@ -16,7 +16,7 @@
 
 <body>
   <header></header>
-  <main>
+  <main id="mainBody" >
     <!-- Navbar -->
     <section id="navBar" class="mx-28">
       <div class="">
@@ -141,7 +141,7 @@
 
         <div class="flex gap-3">
 
-          <img src="images/bus-logo.png" class="flex justify-center items-center" width="200px" height="200px" alt=""
+          <img src="images/bus-logo.png" class="flex justify-center items-center"  alt=""
             srcset="">
           <div>
             <h2 class="text-3xl text-nowrap"> Shohag Paribahan</h2>
@@ -337,6 +337,19 @@
    
 
   </main>
+
+  <section >
+
+    <div id="successModal" class=" hidden bg-white shadow-2xl rounded-2xl shadow-gray-400 flex flex-col items-center justify-center m-40 p-10 gap-y-8">
+         <img src="images/success.png" alt="">
+         <h4 class="text-green-500 text-xl font-normal">Success</h4>
+         <h5 class="text-center">Thank you for  booking our  bus seats <br>
+         Shortly you will find a confirmation message in your mail</h5>
+         <h5>We are working heard to find the best services and deals for you</h5>
+         <button id="continueButton" class="btn bg-green-500 text-black btn-wide rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl">Continue</button>
+    </div>
+
+  </section>
   <footer></footer>
   <script src="Scripts/Ticketbuy.js"></script>
   <script src="Scripts/phoneNumber.js"></script>

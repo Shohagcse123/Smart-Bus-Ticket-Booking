@@ -12,35 +12,39 @@ document.getElementById('seatParent').addEventListener('click',function(event){
     const text = event.target.innerHTML;
     countSeat++;
     console.log(countSeat);
+    const allbtn= document.getElementById('seatParent');
+    if(countSeat==4)
+    {
+         allbtn.setAttribute('disabled',true);
+    }
  const getButon = document.getElementById(text);
 getButon.classList.add('bg-lime-600');
-
-
-// let getPrice = document.getElementById('totalPrice');
-// if(getPrice.innerText==2200)
-// {
-//     const allButon = document.getElementsByClassName('seatButon');
-//     alert('Already you have selected 4 seat.');
-//     allButon.setAttribute('disabled',true);
-    
-
-// }
-
+ getButon.setAttribute('disabled',true);
+ 
+//  seatLimitation(countSeat,'seatParent');
  decreaseSeat();
  tableRowAdd(text);
  priceCalculate(countSeat);
  
 
 })
-// document.getElementById('seatParent').addEventListener('dblclick',function(event){
-//     const text = event.target.innerHTML;
-//  const getButon = document.getElementById(text);
-// //  console.log(getButon);
-// getButon.classList.remove('bg-lime-600');
 
-// increaseSeat();
 
-// })
+
+// 
+
+function seatLimitation(bookedSeat,btnParent)
+{
+    const allbtn= document.getElementById(btnParent);
+    console.log(allbtn);
+    if(bookedSeat===4)
+    {
+        
+        
+    }
+
+}
+
 // Seat no handle
 
 var seat = document.getElementById('seatDecrease');
