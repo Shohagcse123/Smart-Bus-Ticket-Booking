@@ -223,7 +223,7 @@
 
             <div class="grid grid-cols-5 grid-rows-1 flex items-center justify-center  ">
               <p class="">A</p>
-              <Button id="A1" class="seatButon">A1</Button>
+              <Button id="A1" class="seatButon ">A1</Button>
               <Button id="A2" class="seatButon">A2</Button>
               <Button id="A3" class="seatButon">A3</Button>
               <Button id="A4" class="seatButon">A4</Button>
@@ -303,8 +303,8 @@
             </div>
             <label id="cuponLevel" class="input  input-bordered my-6 mx-8 w-96 flex items-center gap-2">
               <input id="cuponField" type="text" class="grow" placeholder="have any cupon ?" />
+              <button id="cuponButon" disabled class=" btn rounded-2xl w-14 p-2 text-center   bg-green-600 text-white">Apply</button>
               
-              <button id="cuponButon" class="rounded-2xl w-14 p-2 text-center bg-green-600 text-white">Apply</button>
             </label>
             <div class="flex justify-around">
               <h3 class="relative right-14">Grand Total</h3>
@@ -314,10 +314,10 @@
             <p class="text-xl"> Passenger Name:</p>
             <input type="text" placeholder="enter your name" class="input input-bordered w-96 " /> 
             <p class="text-xl"> Phone Number:</p>
-            <input type="text" placeholder="enter you phn number" class="input input-bordered w-96 " />
+            <input type="text" id="getPhoneNumber" placeholder="enter you phn number" class="input input-bordered w-96 " />
             <p class="text-xl">Email Id:</p>
             <input type="email" placeholder="enter email id" class="input input-bordered w-96 " />
-             <button class="w-96 mt-6 bg-green-500 text-white text-center p-2 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl">Next</button>
+             <button disabled id="nextButon" class=" btn w-96 mt-6 bg-green-500 text-white text-center p-2 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl">Next</button>
            </div> 
 
            <div class="flex justify-around relative right-10">
@@ -334,10 +334,12 @@
 
       </div>
     </section>
+   
 
   </main>
   <footer></footer>
   <script src="Scripts/Ticketbuy.js"></script>
+  <script src="Scripts/phoneNumber.js"></script>
   
 </body>
 

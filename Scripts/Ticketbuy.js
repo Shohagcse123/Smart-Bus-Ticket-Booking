@@ -14,6 +14,18 @@ document.getElementById('seatParent').addEventListener('click',function(event){
     console.log(countSeat);
  const getButon = document.getElementById(text);
 getButon.classList.add('bg-lime-600');
+
+
+// let getPrice = document.getElementById('totalPrice');
+// if(getPrice.innerText==2200)
+// {
+//     const allButon = document.getElementsByClassName('seatButon');
+//     alert('Already you have selected 4 seat.');
+//     allButon.setAttribute('disabled',true);
+    
+
+// }
+
  decreaseSeat();
  tableRowAdd(text);
  priceCalculate(countSeat);
@@ -85,16 +97,34 @@ function priceCalculate(price)
 
 }
 
-document.getElementById('cuponButon').addEventListener('click',function(){
+  
+document.getElementById('cuponField').addEventListener('keyup',function(){
+    const inputBox= document. getElementById('cuponField');
+    const cuponValue= inputBox.value;
+    console.log(cuponValue);
     const getPrice = document.getElementById('totalPrice');
-    if(getPrice.innerText==2200)
+    const recentPrice=getPrice.innerText;
+    let counter=0;
+    if((recentPrice==2200 && cuponValue=='NEW15')||(recentPrice==2200 && cuponValue=='Couple 20'))
     {
-        cuponCalculate();
+        counter++;
+        console.log("Counter value :",counter);
+        const Apply = document.getElementById('cuponButon');
+         Apply.removeAttribute('disabled');
+        
+        document.getElementById('cuponButon').addEventListener('click',function(){
+            cuponCalculate();
+        })
+    }
+    else {
+        // If conditions are not met, disable the button
+        const applyBtn = document.getElementById('cuponButon');
+        applyBtn.setAttribute('disabled',true);
     }
 
 })
 
-
+// cupon
 function cuponCalculate()
 {
     
@@ -120,3 +150,5 @@ function cuponCalculate()
     }
     
 }
+
+// phone Number validation
