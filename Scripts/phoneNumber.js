@@ -9,7 +9,7 @@ var  cntSeat=0;
 document.getElementById('seatParent').addEventListener('click',function(event){
     const text = event.target.innerHTML;
     cntSeat++;
-    console.log('Seatcount',cntSeat);
+    
     const PhoneField=document.getElementById('getPhoneNumber');
     const phoneValue= PhoneField.value;
     if(validatePhoneNumber(phoneValue))
