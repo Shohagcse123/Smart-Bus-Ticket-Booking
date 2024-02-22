@@ -12,13 +12,13 @@ document.getElementById('seatParent').addEventListener('click',function(event){
     const text = event.target.innerHTML;
     countSeat++;
     console.log(countSeat);
-    const allbtn= document.getElementById('seatParent');
-    if(countSeat==4)
-    {
-         allbtn.setAttribute('disabled',true);
-    }
+    // const allbtn= document.getElementById('seatParent');
+    // if(countSeat==4)
+    // {
+    //      allbtn.setAttribute('disabled',true);
+    // }
  const getButon = document.getElementById(text);
-getButon.classList.add('bg-lime-600');
+getButon.classList.add('bg-green-500');
  getButon.setAttribute('disabled',true);
  
 //  seatLimitation(countSeat,'seatParent');
